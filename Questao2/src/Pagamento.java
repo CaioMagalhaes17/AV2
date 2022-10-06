@@ -1,8 +1,15 @@
+import org.easyMock.EasyMock
 public class Pagamento {
     String dataHoraPagamento;
     int numeroPagamento;
     double valorPago;
 
+    public void inicializa(){
+        pix = EasyMock.createMock(pix.class);
+        cartaoCredito = EasyMock.createMock(cartaoCredito.class);
+        cartaoDebito = EasyMock.createMock(cartaoDebito.class);
+    }
+    
     public Pagamento(String dataHoraPagamento, int numeroPagamento, double valorPago) {
         this.dataHoraPagamento = dataHoraPagamento;
         this.numeroPagamento = numeroPagamento;
